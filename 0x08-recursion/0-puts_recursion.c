@@ -1,18 +1,20 @@
-#include <stdio.h>
+#include "main.h"
 
-void _puts_recursion(char *s) {
-    if (*s == '\0') {
-        printf("\n");
-        return;
-    }
+/**
+ * _puts_recursion - print a string.
+ * @s: pointer to char
+ * Return: No.
+ */
 
-    putchar(*s);
-    _puts_recursion(s + 1);
+void _puts_recursion(char *s)
+{
+	if (*s != '\0')
+	{
+		_putchar(*s);
+		_puts_recursion(s + 1);
+	}
+	else
+	{
+	_putchar('\n');
+	}
 }
-
-int main() {
-    char message[] = "Hello, world!";
-    _puts_recursion(message);
-    return 0;
-}
-
