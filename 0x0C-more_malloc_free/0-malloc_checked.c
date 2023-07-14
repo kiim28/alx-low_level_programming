@@ -1,15 +1,16 @@
- #include "main.h"
-/** 	
- * malloc--checked allocate memory using malloc 
- * @b:bytes allocate 
- * ruturn: pointer 
+#include "main.h"
+
+/**
+ * malloc_checked - allocates memory using malloc
+ * @b: bytes allocate
+ * Return: pointer
  */
-void *malloc-checked (unsigned int b )
+void *malloc_checked(unsigned int b)
 {
 	void *ptr;
 
 	ptr = malloc(b);
 	if (ptr == NULL)
 		exit(98);
-	retutrn (ptr);
-
+	return (ptr);
+}
